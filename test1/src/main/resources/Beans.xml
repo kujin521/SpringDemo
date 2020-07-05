@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+    <bean id="hw" class="spring_01.t1.HelloWorld">
+        <property name="message" value="Hello World!"/>
+    </bean>
+
+    <bean id="hw1" class="spring_01.t3.HelloWorld">
+        <constructor-arg>
+            <value>hlloWorld_1</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="hw2" class="spring_01.t3.HelloWorld">
+        <constructor-arg>
+            <value>hlloWorld_2</value>
+        </constructor-arg>
+    </bean>
+
+    <bean id="customer1" class="spring_01.t4.Customer">
+
+        <constructor-arg index="0" value=""/>
+        <constructor-arg index="1" value=""/>
+        <constructor-arg index="2" value="28"/>
+        <constructor-arg index="3" ref="mydog"/>
+    </bean>
+    <bean id="mydog" class="spring_01.t4.Dog">
+        <constructor-arg value="wangwang"/>
+    </bean>
+
+    <bean id="school" class="spring_01.t5.School">
+        <constructor-arg value="山东交大"/>
+    </bean>
+    <bean id="student" class="spring_01.t5.Student">
+        <constructor-arg index="0" value="mary"/>
+        <constructor-arg index="1" value="24"/>
+        <constructor-arg index="2" ref="school"/>
+    </bean>
+
+    <bean id="di" class="spring_01.t6.DI">
+        <constructor-arg index="0">
+            <map>
+                <entry key="1" value="map1"/>
+            </map>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <set>
+                <value>set1</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <list>
+                <value>list1</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="stu_name" class="spring_01.t7.Student" autowire="byName">
+        <property name="name" value="zhangsan" />
+        <property name="age" value="22" />
+    </bean>
+    <bean id="school_7" class="spring_01.t7.School">
+        <property name="name" value="山东交大"/>
+    </bean>
+
+    <bean id="stu_type" class="spring_01.t7.Student" autowire="byType">
+        <property name="name" value="zhangshan"/>
+        <property name="age" value="22"/>
+    </bean>
+</beans>

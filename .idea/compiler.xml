@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="demo01_springboot_helloworld" target="1.8" />
+      <module name="demo01_springboot_helloworld.main" target="1.8" />
+      <module name="demo01_springboot_helloworld.test" target="1.8" />
+      <module name="spriing_aop" target="1.8" />
+      <module name="spring_boot_helloword" target="1.8" />
+      <module name="spring_mvc_01" target="1.7" />
+      <module name="springboot_data_neo4j" target="1.8" />
+      <module name="springboot_data_neo4j.main" target="1.8" />
+      <module name="springboot_data_neo4j.test" target="1.8" />
+      <module name="springboot_demo" target="1.8" />
+      <module name="springboot_jpa" target="1.8" />
+      <module name="springboot_jpa.main" target="1.8" />
+      <module name="springboot_jpa.test" target="1.8" />
+      <module name="test1" target="6" />
+      <module name="ureka-client.main" target="1.8" />
+      <module name="ureka-client.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spriing_aop" options="-parameters" />
+      <module name="spring_boot_helloword" options="-parameters" />
+      <module name="springboot_demo" options="-parameters" />
+    </option>
+  </component>
+</project>
